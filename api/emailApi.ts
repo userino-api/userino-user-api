@@ -1,7 +1,7 @@
 import client from '../client'
 
 export default {
-  async sendEmailVerification(): Promise<{ is_verified: boolean }> {
+  async sendVerification(): Promise<{ is_verified: boolean }> {
     const { data } = await client.post('/email/send')
     return data
   },
