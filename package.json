@@ -1,0 +1,29 @@
+{
+  "name": "@userino/user-api",
+  "version": "0.0.2",
+  "main": "index",
+  "types": "./index.d.ts",
+  "scripts": {
+    "prepack": "npx tsc --noEmit false",
+    "postpublish": "npm run clean",
+    "clean": "npx module-kit-clean"
+  },
+  "keywords": [
+    "userino",
+    "auth"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/userino-api/userino-user-api"
+  },
+  "dependencies": {
+    "axios": "^1.4.0"
+  },
+  "devDependencies": {
+    "module-kit": "^0.1.0",
+    "typescript": "^4.8.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  }
+}
