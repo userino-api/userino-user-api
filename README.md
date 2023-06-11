@@ -22,3 +22,27 @@ initClient({
   app_id: config.userino.app_id,
 })
 ```
+
+
+#### Init device
+
+We recommend always to initialise device for user. Can be mobile/web.
+
+```tsx
+import { initClient } from '@userino/user-api'
+
+initDevice({
+  deviceId,
+  deviceType: Platform.OS as 'android' | 'ios',
+})
+```
+
+
+### Apis
+
+example:
+```tsx
+import { localAuth, emailApi, remoteApi, firebaseApi  } from '@userino/user-api'
+
+// ...
+```

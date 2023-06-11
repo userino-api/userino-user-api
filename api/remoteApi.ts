@@ -1,4 +1,5 @@
 import client from '../client'
+import { LoginOptions } from '../typings/api'
 
 export default {
   async create(): Promise<{ id: string }> {
@@ -6,8 +7,8 @@ export default {
     return data
   },
 
-  async verify(id: string): Promise<{ is_accepted: boolean; token?: string }> {
-    const { data } = await client.post(`/remote/${id}/verify`)
+  async verify(id: string, options?: LoginOptions<{}>): Promise<{ is_accepted: boolean; token?: string }> {
+    const { data } = await client.post(`/remote/${id}/verify`, options)
     return data
   },
 
