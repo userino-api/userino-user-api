@@ -1,16 +1,16 @@
+import deviceApi from './api/deviceApi'
 import emailApi from './api/emailApi'
 import firebaseApi from './api/firebaseApi'
-import localAuth from './api/localAuth'
+import localAuthApi from './api/localAuthApi'
 import remoteApi from './api/remoteApi'
 
-export {
-  localAuth, emailApi, remoteApi, firebaseApi,
-}
+export { localAuthApi, emailApi, remoteApi, firebaseApi, deviceApi }
 
 export default {
-  ...localAuth,
-  local: localAuth,
+  ...localAuthApi,
+  local: localAuthApi,
   remote: remoteApi,
   firebase: firebaseApi,
   email: emailApi,
+  device: deviceApi,
 }
