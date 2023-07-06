@@ -19,4 +19,16 @@ export function initDevice({ deviceType, deviceId }: { deviceType: UserinoDevice
   apiClient.defaults.headers['device'] = deviceId
 }
 
+export function setAuth({ token }:{ token: string | null | undefined }) {
+  if (token) {
+    apiClient.defaults.headers.common['Authorization'] = token
+  } else {
+    delete apiClient.defaults.headers.common['Authorization']
+  }
+}
+
+export function removeAuth() {
+  return setAuth({ token: undefined })
+}
+
 export default apiClient

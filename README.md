@@ -24,7 +24,23 @@ initClient({
 ```
 
 
-#### Init device
+#### Init user authorization
+
+We recommend always to initialise device for user. Can be mobile/web.
+
+```tsx
+import { setAuth, removeAuth } from '@userino/user-api'
+
+// authorize user
+setAuth({ token: 'USERINO_AUTH_TOKEN' })
+
+// logout user
+removeAuth()
+```
+
+
+
+#### Init device  *(Optional)*
 
 We recommend always to initialise device for user. Can be mobile/web.
 
