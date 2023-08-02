@@ -7,3 +7,4 @@ yarn.lock
 **/*.d.ts
 **/*.js.map
 **/*.js
+!typings/*.d.ts
