@@ -1,6 +1,6 @@
 import axios from 'axios'
 import packageJson from './package.json'
-import { UserinoDeviceType } from './typings/types'
+import { UserinoDeviceType } from './types'
 
 export const apiClient = axios.create({
   // baseURL: config.userino.url,

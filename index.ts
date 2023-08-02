@@ -3,7 +3,7 @@ import userinoApiClient, {
   setAuth, removeAuth, initDevice, initClient,
 } from './client'
 
-export * from './typings/types'
+export * from './types'
 export * from './api'
 export * from './client'
 export { userinoApiClient }

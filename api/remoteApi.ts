@@ -1,5 +1,5 @@
 import client from '../client'
-import { LoginOptions } from '../typings/api'
+import type { LoginOptions } from '../typings/api'
 
 export default {
   async create(): Promise<{ id: string }> {
