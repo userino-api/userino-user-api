@@ -5,9 +5,13 @@ import localAuthApi from './api/localAuthApi'
 import meApi from './api/meApi'
 import mediaApi from './api/mediaApi'
 import remoteApi from './api/remoteApi'
+import userApi from './api/userApi'
+
+export * from './api/meApi'
+export * from './api/userApi'
 
 export {
-  localAuthApi, emailApi, remoteApi, firebaseApi, deviceApi, meApi, mediaApi,
+  localAuthApi, emailApi, remoteApi, firebaseApi, deviceApi, meApi, mediaApi, userApi,
 }
 
 export default {
@@ -19,4 +23,5 @@ export default {
   device: deviceApi,
   me: meApi,
   media: mediaApi,
+  user: userApi,
 }
