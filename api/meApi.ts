@@ -1,11 +1,7 @@
 import client from '../client'
 
-export async function getMe(
-  params: {
-    username: string
-  },
-): Promise<{ }> {
-  const { data } = await client.get('/me', params)
+export async function getMe(): Promise<any> {
+  const { data } = await client.get('/me')
   return data
 }
 
