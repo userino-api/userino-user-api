@@ -22,9 +22,9 @@ export async function setName(params: {
 }
 
 export async function setUserAsset(params: {
-  name: string
+  asset_id: string
 }): Promise<{ }> {
-  const { data } = await client.post('/me/name', params)
+  const { data } = await client.post('/me/asset', params)
   return data
 }
 
