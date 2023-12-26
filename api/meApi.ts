@@ -21,8 +21,16 @@ export async function setName(params: {
   return data
 }
 
+export async function setUserAsset(params: {
+  name: string
+}): Promise<{ }> {
+  const { data } = await client.post('/me/name', params)
+  return data
+}
+
 export default {
   getMe,
   setUsername,
   setName,
+  setAsset: setUserAsset,
 }
