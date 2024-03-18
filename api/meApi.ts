@@ -28,9 +28,15 @@ export async function setUserAsset(params: {
   return data
 }
 
+export async function deleteMe(params?: {}): Promise<{ }> {
+  const { data } = await client.post('/me/delete', params)
+  return data
+}
+
 export default {
   getMe,
   setUsername,
   setName,
   setAsset: setUserAsset,
+  deleteMe,
 }
